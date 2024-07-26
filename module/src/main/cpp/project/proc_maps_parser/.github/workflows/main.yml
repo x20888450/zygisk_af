@@ -1,0 +1,26 @@
+name: Build
+on:
+  push:
+jobs:
+  build-project:
+    name: Build Project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+      - name: latest cmake
+        uses: lukka/get-cmake@latest
+      - name: Configure Project
+        uses: threeal/cmake-action@v1.3.0
+        with:
+         generator: Ninja
+         #cxx-compiler: clang++ 
+         build-dir: build
+         args: --preset=arm
+         run-build: true
+      - name: uplogd
+        uses: actions/upload-artifact@v4
+        with:
+         name: build
+         path: build/lib*a
+         retention-days: 3

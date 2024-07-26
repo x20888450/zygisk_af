@@ -1,0 +1,9 @@
+ext {
+    moduleLibraryName = "com.tencent.af"
+    magiskModuleId = "zygisk_af"
+    moduleName = "王牌战士"
+    moduleAuthor = "QQ开源群樱大牛内部群徒弟"
+    moduleDescription = "打身体伤害变成头伤害\n王牌战士组队开黑QQ群 981514603"
+    moduleVersion = "v1.0"
+    moduleVersionCode = 1
+}
